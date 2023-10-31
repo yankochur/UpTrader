@@ -18,10 +18,11 @@ class MenuItem(models.Model):
             self.depth = 0
         super(MenuItem, self).save(*args, **kwargs)
 
-    def get_ancestors(self):
+     def get_ancestors(self):
         ancestors = []
         current_item = self
         while current_item is not None:
-            ancestors.insert(0, current_item)
+            ancestors.append(current_item)
             current_item = current_item.parent
+        ancestors.reverse()
         return ancestors
