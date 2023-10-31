@@ -3,6 +3,7 @@
 Команды для косноли:
 
 cd uptrader
+
 python manage.py runserver
 
 ---
@@ -10,6 +11,7 @@ python manage.py runserver
 Логин для admin-панели django:
 
 Логин: admin
+
 Пароль: 123123
 
 ---
