@@ -1,0 +1,10 @@
+<ul class="submenu">
+    {% for child in menu_item.menuitem_set.all %}
+        <li>
+            <a href="{% url 'menu:menu_view' child.url %}">{{ child.title }}</a>
+            {% if child == selected_item or child in selected_item.get_ancestors %}
+                {% include "menu/submenu.html" with menu_item=child selected_item=selected_item %}
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

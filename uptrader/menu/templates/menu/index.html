@@ -1,0 +1,8 @@
+{% extends 'menu/base.html' %}
+
+{% load menu_tags %}
+
+{% block content %}
+    <h1>Меню</h1>
+    <a href="{% url 'menu:menu_view' 'main_menu'%}">Переместиться к дереву</a>
+{% endblock %}

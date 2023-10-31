@@ -1,0 +1,13 @@
+{% load menu_tags %}
+
+<ul class="menu">
+    {% for item in root_menu_items %}
+        <li>
+            <a href="{% url 'menu:menu_view' item.url %}">{{ item.title }}</a>
+            {% if item == selected_item or item in selected_item.get_ancestors %}
+                {% include "menu/submenu.html" with menu_item=item selected_item=selected_item %}
+            {% endif %}
+        </li>
+    {% endfor %}
+    <h1>Мы на странице {{ menu_name }}</h1>
+</ul>
