@@ -1,6 +1,8 @@
 Для того, чтобы запусить проект, нужно перейти в папку uptrader и запустить процесс runserver в manage.py файле.
 
-Команды для косноли:
+Команды для консоли:
+
+pip install -r requirements.txt
 
 cd uptrader
 
